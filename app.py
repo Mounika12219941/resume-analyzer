@@ -29,6 +29,7 @@ file.save(filepath)
         # word count
         words = len(content.split())
 
+
         # skill detection
         found_skills = []
         for skill in skills_list:
@@ -36,8 +37,13 @@ file.save(filepath)
                 found_skills.append(skill)
                 if not found_skills:
                      found_skills = ["No major skills detected"]
+                    score = min(100, words // 10 + len(found_skills) * 10)
+                    if words < 100:
+    suggestion = "Add more content"
+else:
+    suggestion = "Good resume length
 
-        return render_template("result.html", words=words, skills=found_skills)
+        return render_template("result.html", words=words, skills=found_skills, score=score, suggestion=suggestion)
 
     return "Upload failed"
 
