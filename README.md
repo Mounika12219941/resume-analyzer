@@ -1,16 +1,23 @@
-\# Resume Analyzer
+# 🚀 AI Resume Analyzer
 
+A simple AI-based Resume Analyzer built using Flask.
 
+## 🔥 Features
+- Upload resume
+- Word count analysis
+- Skill detection (Python, Java, etc.)
+- Result page with insights
 
-\## Features
+## 🛠 Tech Stack
+- Python
+- Flask
+- HTML
 
-\- Upload resume
+## ▶️ How to Run
+pip install flask  
+python app.py  
 
-\- Basic analysis
-
-
-
-\## Tech Stack
-
-Python, Flask
-
+## 📌 Future Improvements
+- ATS Score
+- NLP-based analysis
+- Job matching
