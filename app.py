@@ -10,7 +10,7 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 # simple skill list
-skills_list = ["python", "java", "c++", "sql", "html", "css", "javascript"]
+skills_list = ["python", "java", "c++", "sql", "html", "css", "javascript", "react", "node", "machine learning"]
 
 @app.route("/")
 def home():
@@ -22,10 +22,9 @@ def upload():
     
     if file:
         filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
-        file.save(filepath)
-
-        # read file content (simple text only)
         content = file.read().decode("utf-8", errors="ignore")
+file.seek(0)
+file.save(filepath)
 
         # word count
         words = len(content.split())
@@ -35,6 +34,8 @@ def upload():
         for skill in skills_list:
             if skill in content.lower():
                 found_skills.append(skill)
+                if not found_skills:
+                     found_skills = ["No major skills detected"]
 
         return render_template("result.html", words=words, skills=found_skills)
 
