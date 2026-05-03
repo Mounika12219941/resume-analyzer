@@ -39,7 +39,7 @@ file.save(filepath)
                      found_skills = ["No major skills detected"]
                     score = min(100, words // 10 + len(found_skills) * 10)
                     if words < 100:
-    suggestion = "Add more content"
+    suggestion = "Your resume is too short. Add more skills, projects, and experience."
 else:
     suggestion = "Good resume length
 
