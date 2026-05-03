@@ -6,7 +6,7 @@ A simple AI-based Resume Analyzer built using Flask.
 - Upload resume
 - Word count analysis
 - Skill detection (Python, Java, etc.)
-- Result page with insights
+- Includes ATS scoring system and resume improvement suggestions
 
 ## 🛠 Tech Stack
 - Python
